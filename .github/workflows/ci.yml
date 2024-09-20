@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3  # Upgrade checkout action to v3
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3  # Upgrade setup-node action to v3
       with:
-        node-version: '14'
+        node-version: '20'  # Use the latest node version to avoid future deprecations
     - run: npm install
     - run: npm test
