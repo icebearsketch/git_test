@@ -1,4 +1,4 @@
-name: Simple CI Pipeline
+name: CI Pipeline with Shell Script
 
 on: [push]
 
@@ -7,5 +7,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3  # Step 1: Checkout your repository
-    - run: echo "Hello, DevOps!"  # Step 2: Print a simple message to verify the pipeline runs
+    - uses: actions/checkout@v3  # Check out the code
+    - name: Run Shell Script
+      run: bash script.sh  # Execute the script.sh file
